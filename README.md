@@ -1,1 +1,2 @@
-# cpp_behavioral_design_patterns
+# C++ Design Patterns: Behavioral
+by Shaun Wassell
