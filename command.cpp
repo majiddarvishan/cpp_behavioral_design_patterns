@@ -83,25 +83,25 @@ int main()
 {
     Canvas* Canvas = new Canvas();
 
-    Button* addTriangleButton = new Button(new AddShapeCommand("triangle", convas));
-    Button* addSquareButton = new Button(new AddShapeCommand("square", convas));
+    Button* addTriangleButton = new Button(new AddShapeCommand("triangle", canvas));
+    Button* addSquareButton = new Button(new AddShapeCommand("square", canvas));
 
-    Button* clearButton = new Button(new ClearCommand(convas));
+    Button* clearButton = new Button(new ClearCommand(canvas));
 
     addTriangleButton->click();
-    std::cout<<"Current convas state: " <<
-        vectorToString(convas->getShapes()) <<"\n";
+    std::cout<<"Current canvas state: " <<
+        vectorToString(canvas->getShapes()) <<"\n";
 
     addSquareButton->click();
     addSquareButton->click();
     addTriangleButton->click();
-    std::cout<<"Current convas state: " <<
-        vectorToString(convas->getShapes()) <<"\n";
+    std::cout<<"Current canvas state: " <<
+        vectorToString(canvas->getShapes()) <<"\n";
 
     clearButton->click();
-    std::cout<<"Current convas state: " <<
-        vectorToString(convas->getShapes()) <<"\n";
+    std::cout<<"Current canvas state: " <<
+        vectorToString(canvas->getShapes()) <<"\n";
 
-    delete convas;
+    delete canvas;
     return 0;
 }
